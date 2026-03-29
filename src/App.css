@@ -1,0 +1,329 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f6f8;
+  color: #1e293b;
+  overflow-x: hidden;
+  line-height: 1.6;
+
+  /* Better scroll compatibility */
+  scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #f97316;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #f97316;
+}
+
+.nav-btn {
+  background: #f97316;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #ea580c;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 8%;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #f97316;
+}
+
+.hero-left p {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #475569;
+  max-width: 500px;
+}
+
+.primary-btn {
+  margin-top: 40px;
+  padding: 16px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: #f97316;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #ea580c;
+}
+
+.hero-right img {
+  width: 480px;
+  max-width: 100%;
+}
+
+/* ================= WHY SECTION ================= */
+
+.why-section {
+  padding: 100px 8%;
+  text-align: center;
+  background: #f5f6f8;
+}
+
+.why-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.why-subtitle {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.why-cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  overflow-x: auto;
+
+  /* Safari safe scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  padding-bottom: 20px;
+}
+
+.why-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.why-card {
+  min-width: 260px;
+  background: #e9edf3;
+  padding: 40px 30px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-card h3 {
+  color: #f97316;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  color: #334155;
+}
+
+/* ================= ENTERPRISE / LOGIN BACKGROUND ================= */
+
+.enterprise-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  overflow: hidden;
+}
+
+.enterprise-bg::before {
+  content: "";
+  position: absolute;
+
+  /* Safari compatible instead of inset */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* ================= GLASS CARD ================= */
+
+.glass-card {
+  position: relative;
+  z-index: 2;
+
+  /* Safari order fix */
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
+  background: rgba(255, 255, 255, 0.08);
+  padding: 50px 60px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ================= ENTERPRISE BUTTONS ================= */
+
+.toggle-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.toggle-btn {
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.toggle-btn.active {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+/* ================= LOGIN INPUTS ================= */
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .hero-right img {
+    width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .glass-card {
+    width: 90%;
+    padding: 40px 30px;
+  }
+
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
