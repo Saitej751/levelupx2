@@ -35,7 +35,7 @@ function Courses() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/employee/${employeeEmail}/courses`
+        `http://levelupx2-backend.onrender.com/employee/${employeeEmail}/courses`
       );
 
       if (res.data.courses) {
@@ -57,7 +57,7 @@ function Courses() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/employee/folios/${employeeEmail}`
+        `http://levelupx2-backend.onrender.com/employee/folios/${employeeEmail}`
       );
 
       setStudents(res.data);
@@ -77,7 +77,7 @@ function Courses() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/employee/tasks/${courseId}`
+        `http://levelupx2-backend.onrender.com/employee/tasks/${courseId}`
       );
 
       setTasks(res.data);
@@ -97,7 +97,7 @@ function Courses() {
     try {
 
       await axios.put(
-        `http://localhost:5000/employee/unlock-task/${taskId}`
+        `http://levelupx2-backend.onrender.com/employee/unlock-task/${taskId}`
       );
 
       fetchTasks(selectedCourse.course_id);
@@ -117,7 +117,7 @@ function Courses() {
     try {
 
       await axios.put(
-        `http://localhost:5000/employee/lock-task/${taskId}`
+        `http://levelupx2-backend.onrender.com/employee/lock-task/${taskId}`
       );
 
       fetchTasks(selectedCourse.course_id);
@@ -139,7 +139,7 @@ function Courses() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/employee/delete-task/${taskId}`
+        `http://levelupx2-backend.onrender.com/employee/delete-task/${taskId}`
       );
 
       // update UI instantly
@@ -171,7 +171,7 @@ function Courses() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/employee/courses",
+        "http://levelupx2-backend.onrender.com/employee/courses",
         {
           employee_email: employeeEmail,
           course_name: courseTitle
@@ -216,7 +216,7 @@ function Courses() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/employee/create-task",
+        "http://levelupx2-backend.onrender.com/employee/create-task",
         {
           course_id: selectedCourse.course_id,
           question: taskDescription,

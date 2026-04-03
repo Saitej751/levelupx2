@@ -25,7 +25,7 @@ function StudentLogin() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/student/login", {
+      const response = await fetch("http://levelupx2-backend.onrender.com/student/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

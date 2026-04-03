@@ -12,7 +12,7 @@ function Settings() {
 
   const handleUpdateProfile = async () => {
     try {
-      await axios.put("http://127.0.0.1:5000/employee/update-profile", {
+      await axios.put("http://levelupx2-backend.onrender.com/employee/update-profile", {
         employee_id,
         name
       });
@@ -25,7 +25,7 @@ function Settings() {
 
   const handleChangePassword = async () => {
     try {
-      await axios.put("http://127.0.0.1:5000/employee/change-password", {
+      await axios.put("http://levelupx2-backend.onrender.com/employee/change-password", {
         employee_id,
         password: newPassword
       });

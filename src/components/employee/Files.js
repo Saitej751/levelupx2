@@ -22,7 +22,7 @@ function Files({ courseId }) {
   const fetchFiles = useCallback(async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/course/${courseId}/files`
+        `http://levelupx2-backend.onrender.com/course/${courseId}/files`
       );
 
       if (Array.isArray(res.data)) {
@@ -60,7 +60,7 @@ function Files({ courseId }) {
 
     try {
       await axios.post(
-        "http://localhost:5000/course/upload-file",
+        "http://levelupx2-backend.onrender.com/course/upload-file",
         formData,
         {
           headers: {
@@ -152,7 +152,7 @@ function Files({ courseId }) {
               }}
             >
               <a
-                href={`http://localhost:5000/uploads/${file.name}`}
+                href={`http://levelupx2-backend.onrender.com/uploads/${file.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

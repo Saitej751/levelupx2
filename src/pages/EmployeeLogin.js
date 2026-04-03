@@ -11,7 +11,7 @@ function EmployeeLogin() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/employee/login", {
+      const response = await fetch("http://levelupx2-backend.onrender.com/employee/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

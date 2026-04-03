@@ -44,7 +44,7 @@ function StudentCourses() {
 
       try {
 
-        const url = `http://localhost:5000/student/${studentId}/courses`;
+        const url = `http://levelupx2-backend.onrender.com/student/${studentId}/courses`;
 
         const response = await fetch(url, {
           headers: {
@@ -91,7 +91,7 @@ function StudentCourses() {
 
     try {
 
-      const url = `http://localhost:5000/student/${studentId}/tasks/${courseId}`;
+      const url = `http://levelupx2-backend.onrender.com/student/${studentId}/tasks/${courseId}`;
 
       const response = await fetch(url, {
         headers: {
@@ -144,7 +144,7 @@ function StudentCourses() {
 
     try {
 
-      const response = await fetch("http://localhost:5000/student/submit-task", {
+      const response = await fetch("http://levelupx2-backend.onrender.com/student/submit-task", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

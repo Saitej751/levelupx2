@@ -22,7 +22,7 @@ const fetchFolios = useCallback(async () => {
 
   try {
     const res = await axios.get(
-      `http://127.0.0.1:5000/employee/folios/${employeeEmail}`
+      `http://levelupx2-backend.onrender.com/employee/folios/${employeeEmail}`
     );
     setFolios(res.data);
   } catch (error) {
@@ -50,7 +50,7 @@ useEffect(() => {
       }
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/employee/folios",
+        "http://levelupx2-backend.onrender.com/employee/folios",
         {
           employee_email: employeeEmail,
           name: name,
@@ -88,7 +88,7 @@ useEffect(() => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:5000/employee/delete-folio",
+        "http://levelupx2-backend.onrender.com/employee/delete-folio",
         {
           employee_email: employeeEmail,
           student_email: selectedFolio
